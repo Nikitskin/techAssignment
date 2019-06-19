@@ -1,4 +1,5 @@
 ﻿using WAES.UI.Core.Browser;
+using WAES.UI.Core.Element;
 
 namespace WAES.UI.Pages
 {
@@ -10,5 +11,8 @@ namespace WAES.UI.Pages
         {
             browser = browserSession;
         }
+
+        public IBaseWebElement Heading => new BaseWebElement(browserSession, By.Id("home_link"));
+
     }
 }
