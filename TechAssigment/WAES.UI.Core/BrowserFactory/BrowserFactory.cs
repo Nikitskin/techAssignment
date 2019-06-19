@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using WAES.UI.Core.Browser;
 
 namespace WAES.UI.CoreBrowser.BrowserFactory
 {

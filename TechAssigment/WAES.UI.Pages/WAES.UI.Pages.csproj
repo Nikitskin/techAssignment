@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WAES.UI.Core.Element\WAES.UI.Core.Element.csproj" />
     <ProjectReference Include="..\WAES.UI.Core\WAES.UI.Core.Browser.csproj" />
   </ItemGroup>
 

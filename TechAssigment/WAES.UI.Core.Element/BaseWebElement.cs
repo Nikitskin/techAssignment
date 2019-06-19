@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Remote;
+using WAES.UI.Core.Browser;
 
 namespace WAES.UI.Core.Element
 {
@@ -7,14 +7,9 @@ namespace WAES.UI.Core.Element
     {
         private IWebElement _coreElement;
 
-        public BaseWebElement()
+        public BaseWebElement(IBrowser browser, By by)
         {
-            _coreElement = new RemoteWebElement();
-        }
-
-        public BaseWebElement(IWebElement element)
-        {
-            _coreElement = element;
+            _coreElement = browser.FindElement(by);
         }
 
         public string Text => _coreElement.Text;
