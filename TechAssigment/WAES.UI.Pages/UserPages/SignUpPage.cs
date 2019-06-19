@@ -17,17 +17,19 @@ namespace WAES.UI.Pages.UserPages
 
         public IBaseWebElement EmailInput => new BaseWebElement(browserSession, By.Id("email_input"));
 
-        public IBaseWebElement DaySelect => new BaseWebElement(browserSession, By.Id("day_select"));
+        public ISelectWebElement DaySelect => new SelectWebElement(browserSession, By.Id("day_select"));
 
-        public IBaseWebElement MonthSelect => new BaseWebElement(browserSession, By.Id("month_select"));
+        public ISelectWebElement MonthSelect => new SelectWebElement(browserSession, By.Id("month_select"));
 
-        public IBaseWebElement YearSelect => new BaseWebElement(browserSession, By.Id("year_select"));
+        public ISelectWebElement YearSelect => new SelectWebElement(browserSession, By.Id("year_select"));
 
         public IBaseWebElement SubmitButton => new BaseWebElement(browserSession, By.Id("submit_button"));
 
         public void SetDateOfBirth()
         {
-            DaySelect
+            DaySelect.SelectRandomValue();
+            MonthSelect.SelectRandomValue();
+            YearSelect.SelectRandomValue();
         }
         
     }

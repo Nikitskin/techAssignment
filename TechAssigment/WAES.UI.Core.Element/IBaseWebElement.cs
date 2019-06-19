@@ -9,10 +9,5 @@
         bool Displayed { get; }
 
         void Click();
-
-        void SendKeys(string text);
-
-        void Clear();
-
     }
 }

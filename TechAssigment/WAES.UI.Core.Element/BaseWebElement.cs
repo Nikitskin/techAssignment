@@ -5,7 +5,7 @@ namespace WAES.UI.Core.Element
 {
     public class BaseWebElement : IBaseWebElement
     {
-        private IWebElement _coreElement;
+        protected IWebElement _coreElement;
 
         public BaseWebElement(IBrowser browser, By by)
         {
@@ -16,11 +16,6 @@ namespace WAES.UI.Core.Element
 
         public bool Displayed => _coreElement.Displayed;
 
-        public void Clear()
-        {
-            _coreElement.Clear();
-        }
-
         public void Click()
         {
             _coreElement.Click();
@@ -29,12 +24,6 @@ namespace WAES.UI.Core.Element
         public void Focus()
         {
             throw new System.NotImplementedException();
-        }
-
-        public void SendKeys(string text)
-        {
-            _coreElement.Clear();
-            _coreElement.SendKeys(text);
         }
     }
 }
