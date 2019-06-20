@@ -9,8 +9,8 @@ namespace WAES.UI.Pages.TopNavigationBar
         public UnAuthNavBar(IBrowser browser) : base(browser)
         { }
 
-        public IBaseWebElement LogIn => new BaseWebElement(browserSession, By.Id("login_link"));
+        public IBaseWebElement LogInLink => new BaseWebElement(browserSession, By.Id("login_link"));
 
-        public IBaseWebElement SignUp => new BaseWebElement(browserSession, By.Id("signup_link"));
+        public IBaseWebElement SignUpLink => new BaseWebElement(browserSession, By.Id("signup_link"));
     }
 }

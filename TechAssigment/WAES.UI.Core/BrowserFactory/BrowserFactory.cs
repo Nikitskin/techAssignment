@@ -6,6 +6,11 @@ namespace WAES.UI.CoreBrowser.BrowserFactory
 {
     public static class BrowserFactory
     {
+        /// <summary>
+        /// Generate browser instance of required browser type
+        /// </summary>
+        /// <param name="browserType">Browser enumeration which should be created</param>
+        /// <returns>Browser wrapper instance that covers browser functionality</returns>
         public static BrowserWrapper GetBrowser (BrowserTypes browserType)
         {
             IWebDriver driver;

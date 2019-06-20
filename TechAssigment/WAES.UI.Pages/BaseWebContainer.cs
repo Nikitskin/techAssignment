@@ -1,4 +1,5 @@
-﻿using WAES.UI.Core.Browser;
+﻿using OpenQA.Selenium;
+using WAES.UI.Core.Browser;
 using WAES.UI.Core.Element;
 
 namespace WAES.UI.Pages

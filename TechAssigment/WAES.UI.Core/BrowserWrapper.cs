@@ -3,6 +3,10 @@ using OpenQA.Selenium;
 
 namespace WAES.UI.Core.Browser
 {
+    /// <summary>
+    /// Purpose of this class is to wrap core functionality of selenium webdriver
+    /// and add extended functionality specified for concrete project
+    /// </summary>
     public class BrowserWrapper : IBrowser
     {
         private IWebDriver _coreDriver;

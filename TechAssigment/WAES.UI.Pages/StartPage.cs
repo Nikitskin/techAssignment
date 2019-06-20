@@ -2,7 +2,7 @@
 
 namespace WAES.UI.Pages
 {
-    public class StartPage : UnAuthNavBar
+    public class StartPage : BaseWebContainer
     {
         public StartPage(IBrowser browser) : base(browser)
         { }
