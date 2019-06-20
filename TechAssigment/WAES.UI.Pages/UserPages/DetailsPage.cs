@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using WAES.UI.Core.Browser;
 using WAES.UI.Core.Element;
+using WAES.UI.Core.Element.Interfaces;
 
 namespace WAES.UI.Pages.UserPages
 {
@@ -12,7 +13,7 @@ namespace WAES.UI.Pages.UserPages
         public IBaseWebElement NameLabel => new BaseWebElement(browserSession,
             By.XPath("//section[contains(@class,'view-module')]//li[contains(text(),'Name')]"));
 
-        public IBaseWebElement EmailLable => new BaseWebElement(browserSession,
+        public IBaseWebElement EmailLabel => new BaseWebElement(browserSession,
             By.XPath("//section[contains(@class,'view-module')]//li[contains(text(),'Email')]"));
     }
 }

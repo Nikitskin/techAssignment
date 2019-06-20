@@ -1,10 +1,8 @@
-﻿namespace WAES.UI.Core.Element
+﻿namespace WAES.UI.Core.Element.Interfaces
 {
     public interface IBaseWebElement
     {
         string Text { get; }
-
-        void Focus();
 
         bool Displayed { get; }
 

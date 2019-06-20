@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using WAES.UI.Core.Browser;
 using WAES.UI.Core.Element;
+using WAES.UI.Core.Element.Interfaces;
 
 namespace WAES.UI.Pages.UserPages
 {
@@ -9,13 +10,13 @@ namespace WAES.UI.Pages.UserPages
         public SignUpPage(IBrowser browser) : base(browser)
         { }
 
-        public IBaseWebElement UserNameInput => new BaseWebElement(browserSession, By.Id("username_input"));
+        public IInputField UserNameInput => new InputField(browserSession, By.Id("username_input"));
 
-        public IBaseWebElement PasswordInput => new BaseWebElement(browserSession, By.Id("password_input"));
+        public IInputField PasswordInput => new InputField(browserSession, By.Id("password_input"));
 
-        public IBaseWebElement NameInput => new BaseWebElement(browserSession, By.Id("name_input"));
+        public IInputField NameInput => new InputField(browserSession, By.Id("name_input"));
 
-        public IBaseWebElement EmailInput => new BaseWebElement(browserSession, By.Id("email_input"));
+        public IInputField EmailInput => new InputField(browserSession, By.Id("email_input"));
 
         public ISelectWebElement DaySelect => new SelectWebElement(browserSession, By.Id("day_select"));
 

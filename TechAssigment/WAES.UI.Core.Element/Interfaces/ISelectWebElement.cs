@@ -1,4 +1,4 @@
-﻿namespace WAES.UI.Core.Element
+﻿namespace WAES.UI.Core.Element.Interfaces
 {
     public interface ISelectWebElement
     {
