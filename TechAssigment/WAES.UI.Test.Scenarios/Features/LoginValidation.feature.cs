@@ -71,17 +71,19 @@ namespace WAES.UI.Test.Scenarios.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Log out functionality")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         public virtual void LogOutFunctionality()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log out functionality", null, ((string[])(null)));
-#line 3
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log out functionality", null, new string[] {
+                        "SmokeTest"});
+#line 4
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 4
- testRunner.Given("I log in as \'dev\' into application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 5
- testRunner.When("I press log out link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I log in as \'dev\' into application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
+ testRunner.When("I press log out link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 7
  testRunner.Then("I should be on to login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -89,6 +91,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Invalid log in check")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("1", "1", null)]
         [NUnit.Framework.TestCaseAttribute("~!@#$%^&*()_+-=[];\'\\.,/{}:", "<>?`\\~!@#$%^&*()_+-=[];\'\\.,/{}:\"  <>?`\\", null)]
         [NUnit.Framework.TestCaseAttribute("-1A", "-1A", null)]
@@ -96,15 +99,21 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute("tester", "wizard", null)]
         public virtual void InvalidLogInCheck(string userName, string password, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid log in check", null, exampleTags);
-#line 8
+            string[] @__tags = new string[] {
+                    "SmokeTest"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid log in check", null, @__tags);
+#line 10
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 9
- testRunner.Given(string.Format("I login as {0} and {1} on login page", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 10
- testRunner.Then("I see error with text \'Wrong credentials. You can do it, try again!\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
+ testRunner.Given(string.Format("I login as {0} and {1} on login page", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+ testRunner.Then("I see error with text \'Wrong credentials. You can do it, try again!\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 13
  testRunner.And("I should be on to login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -112,20 +121,27 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Correct information in profile after log in")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("dev", "Your super power: Debug a repellent factory storage.", null)]
         [NUnit.Framework.TestCaseAttribute("admin", "Your super power: Change the course of a waterfall.", null)]
         [NUnit.Framework.TestCaseAttribute("tester", "Your super power: Voltage AND Current.", null)]
         public virtual void CorrectInformationInProfileAfterLogIn(string user, string profileText, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct information in profile after log in", null, exampleTags);
-#line 21
+            string[] @__tags = new string[] {
+                    "SmokeTest"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct information in profile after log in", null, @__tags);
+#line 24
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 22
+#line 25
  testRunner.Given(string.Format("I log in as \'{0}\' into application", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 23
+#line 26
  testRunner.When("Click Profile link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
+#line 27
  testRunner.Then(string.Format("I see \'{0}\' in my profile", profileText), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -133,20 +149,27 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Correct information in Details after log in")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("tester", "Al Skept-Cal Tester", "as.tester@wearewaes.com", null)]
         [NUnit.Framework.TestCaseAttribute("admin", "Amazing Admin", "a.admin@wearewaes.com", null)]
         [NUnit.Framework.TestCaseAttribute("dev", "Zuper Dooper Dev", "zd.dev@wearewaes.com", null)]
         public virtual void CorrectInformationInDetailsAfterLogIn(string user, string name, string email, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct information in Details after log in", null, exampleTags);
-#line 32
+            string[] @__tags = new string[] {
+                    "SmokeTest"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct information in Details after log in", null, @__tags);
+#line 36
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 33
+#line 37
  testRunner.Given(string.Format("I log in as \'{0}\' into application", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 34
+#line 38
  testRunner.When("Click Details link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
+#line 39
  testRunner.Then(string.Format("I see \'{0}\' and \'{1}\' in details page", name, email), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -1,17 +1,13 @@
 ﻿using NUnit.Framework;
 using TechTalk.SpecFlow;
+using WAES.UI.Pages;
 
 namespace WAES.UI.Test.Scenarios.Steps
 {
-    [Binding]
     public class LoginStepDefinitions : BaseDefinitions
     {
-        private readonly ScenarioContext context;
-
-        public LoginStepDefinitions(ScenarioContext injectedContext)
-        {
-            context = injectedContext;
-        }
+        public LoginStepDefinitions(ScenarioContext injectedContext) : base(injectedContext)
+        { }
 
         [Given(@"I log in as '(.*)' into application")]
         public void GivenILogInAsIntoApplication(string username)

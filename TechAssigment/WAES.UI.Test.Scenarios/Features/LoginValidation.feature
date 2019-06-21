@@ -1,10 +1,12 @@
 ﻿Feature: LogInValidations
 
+@SmokeTest
 Scenario: Log out functionality
 	Given I log in as 'dev' into application
 	When I press log out link
 	Then I should be on to login page
 
+@SmokeTest
 Scenario Outline: Invalid log in check
 	Given I login as <userName> and <password> on login page
 	Then I see error with text 'Wrong credentials. You can do it, try again!'
@@ -18,6 +20,7 @@ Scenario Outline: Invalid log in check
 	| SELECT * FROM users        | SELECT * FROM users                     |
 	| tester                     | wizard                                  |
 
+@SmokeTest
 Scenario Outline: Correct information in profile after log in
 	Given I log in as '<user>' into application
 	When Click Profile link
@@ -29,6 +32,7 @@ Scenario Outline: Correct information in profile after log in
 	| admin  | Your super power: Change the course of a waterfall.  |
 	| tester | Your super power: Voltage AND Current.               |
 
+@SmokeTest
 Scenario Outline: Correct information in Details after log in
 	Given I log in as '<user>' into application
 	When Click Details link

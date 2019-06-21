@@ -3,23 +3,29 @@ using WAES.UI.Pages;
 
 namespace WAES.UI.Test.Scenarios.Steps
 {
+    [Binding]
     public class BaseDefinitions
     {
-        protected PageProvider PageProvider;
+        protected static PageProvider PageProvider;
+        private readonly ScenarioContext context;
+
+        public BaseDefinitions(ScenarioContext injectedContext)
+        {
+            context = injectedContext;
+        }
 
         [BeforeScenario]
-        public void BeforeScenario()
+        private void BeforeScenario()
         {
             string url = Settings.Default.Url;
             PageProvider = new PageProvider();
             PageProvider.Browser.Navigate().GoToUrl(url);
         }
-        
+
         [AfterScenario]
-        public void AfterScenario()
+        private void AfterScenario()
         {
             PageProvider.Flush();
         }
-
     }
 }

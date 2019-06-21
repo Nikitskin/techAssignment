@@ -23,7 +23,7 @@ namespace WAES.UI.CoreBrowser.BrowserFactory
                     driver = new ChromeDriver(Directory.GetCurrentDirectory());
                     driver.Manage().Cookies.DeleteAllCookies();
                     driver.Manage().Window.Maximize();
-                    driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
+                    driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
                     return new BrowserWrapper(driver);
                 default:
                     throw new WebDriverException("Driver type is not defined");
