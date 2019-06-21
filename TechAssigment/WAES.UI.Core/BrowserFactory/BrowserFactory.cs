@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System.IO;
 using WAES.UI.Core.Browser;
 
 namespace WAES.UI.CoreBrowser.BrowserFactory
@@ -18,9 +19,9 @@ namespace WAES.UI.CoreBrowser.BrowserFactory
             switch (browserType)
             {
                 case BrowserTypes.Chrome:
-                    driver = new ChromeDriver();
+                    driver = new ChromeDriver(Directory.GetCurrentDirectory());
                     driver.Manage().Cookies.DeleteAllCookies();
-                    driver.Manage().Window.FullScreen();
+                    driver.Manage().Window.Maximize();
                     return new BrowserWrapper(driver);
                 default:
                     throw new WebDriverException("Driver type is not defined");

@@ -55,7 +55,8 @@ Scenario Outline: Incorrect input validation on SignUp
 	| SELECT * FROM users         | SELECT * FROM users      |
 	|                             | test@emailcom            |
 
-Scenario Outline: Date validation on signup
+@SmokeTest
+Scenario: Date validation on signup
 	Given I enter 'Tester' in username field
 	And I enter 'Tester' in password field
 	And I enter 'Name' in name field

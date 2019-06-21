@@ -1,10 +1,13 @@
 ﻿using NUnit.Framework;
 using System.Configuration;
 using TechTalk.SpecFlow;
+using System;
 
-namespace WAES.UI.Test.Definitions
+namespace WAES.UI.Test.Scenarios.Steps
+
 {
-    public sealed class LoginStepDefinitions : BaseDefinitions
+    [Binding]
+    public class LoginStepDefinitions : BaseDefinitions
     {
         private readonly ScenarioContext context;
 
@@ -49,7 +52,7 @@ namespace WAES.UI.Test.Definitions
         [Then(@"I see error with text '(.*)'")]
         public void ThenISeeErrorWithText(string errorText)
         {
-            Assert.AreEqual(errorText, PageProvider.UnAuthorizedTopBar.StatusLabel.Text.Trim(), 
+            Assert.AreEqual(errorText, PageProvider.UnAuthorizedTopBar.StatusLabel.Text.Trim(),
                 "Incorrect error message appeared in status bar");
         }
 
@@ -77,7 +80,7 @@ namespace WAES.UI.Test.Definitions
         {
             Assert.AreEqual(name, PageProvider.DetailsPage.NameLabel.Text.Trim(),
                 $"{name} should be displayed in name field");
-            Assert.AreEqual(email, PageProvider.DetailsPage.EmailLabel.Text.Trim(), 
+            Assert.AreEqual(email, PageProvider.DetailsPage.EmailLabel.Text.Trim(),
                 $"{email} should be displayed in email address");
         }
 

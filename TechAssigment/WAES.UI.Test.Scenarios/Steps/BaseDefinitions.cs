@@ -2,9 +2,8 @@
 using TechTalk.SpecFlow;
 using WAES.UI.Pages;
 
-namespace WAES.UI.Test.Definitions
+namespace WAES.UI.Test.Scenarios.Steps
 {
-    [Binding]
     public class BaseDefinitions
     {
         protected PageProvider PageProvider;
@@ -12,7 +11,7 @@ namespace WAES.UI.Test.Definitions
         [BeforeScenario]
         public void BeforeScenario()
         {
-            string url = ConfigurationManager.AppSettings.Get("Url");
+            string url = Settings.Default.Url;
             PageProvider = new PageProvider();
             PageProvider.Browser.Navigate().GoToUrl(url);
         }

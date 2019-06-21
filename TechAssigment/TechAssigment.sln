@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WAES.UI.Test.Scenarios", "TechAssigment\WAES.UI.Test.Scenarios.csproj", "{B267D4A1-D73D-4EAD-A49B-5B2E2DF688A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WAES.UI.Test.Scenarios", "WAES.UI.Test.Scenarios\WAES.UI.Test.Scenarios.csproj", "{B267D4A1-D73D-4EAD-A49B-5B2E2DF688A0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WAES.UI.Pages", "WAES.UI.Pages\WAES.UI.Pages.csproj", "{4C51FBB3-7D20-4F85-BF21-C03E465934B9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WAES.UI.Core.Browser", "WAES.UI.Core\WAES.UI.Core.Browser.csproj", "{4CE75E5A-A9A7-4BDB-A878-AA27E125AFF0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WAES.UI.Core.Element", "WAES.UI.Core.Element\WAES.UI.Core.Element.csproj", "{8B554011-5B82-4026-BB6F-1E5CE1291C1E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAES.UI.Test.Definitions", "WAES.UI.Test.Definitions\WAES.UI.Test.Definitions.csproj", "{9E475EA4-86EB-44DA-B37B-94E49B86544D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{8B554011-5B82-4026-BB6F-1E5CE1291C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B554011-5B82-4026-BB6F-1E5CE1291C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B554011-5B82-4026-BB6F-1E5CE1291C1E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E475EA4-86EB-44DA-B37B-94E49B86544D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E475EA4-86EB-44DA-B37B-94E49B86544D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E475EA4-86EB-44DA-B37B-94E49B86544D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E475EA4-86EB-44DA-B37B-94E49B86544D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

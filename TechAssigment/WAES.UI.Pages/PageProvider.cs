@@ -9,7 +9,17 @@ namespace WAES.UI.Pages
     {
         private IBrowser _browser { get; set; }
 
-        public IBrowser Browser => _browser ?? BrowserFactory.GetBrowser(BrowserTypes.Chrome);
+        public IBrowser Browser
+        {
+            get
+            {
+                if(_browser == null)
+                {
+                    _browser = BrowserFactory.GetBrowser(BrowserTypes.Chrome);
+                }
+                return _browser;
+            }
+        }
 
         public AuthorizedNavBar AuthorizedTopBar => new AuthorizedNavBar(Browser);
 
