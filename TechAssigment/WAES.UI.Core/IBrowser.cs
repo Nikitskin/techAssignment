@@ -65,5 +65,12 @@ namespace WAES.UI.Core.Browser
         /// <returns> An OpenQA.Selenium.ITargetLocator object which can be used to select a frame
         ///     or window.</returns>
         ITargetLocator SwitchTo();
+
+        /// <summary>
+        /// Executes configured javascript on driver
+        /// </summary>
+        /// <param name="script">Script to execute</param>
+        /// <returns>Retunrs response on script from browser</returns>
+        object ExecuteScript(string script, params object[] args);
     }
 }

@@ -11,13 +11,18 @@ namespace WAES.UI.Core.Element
 
         public void Clear()
         {
-            _coreElement().SendKeys(string.Empty);
+            coreElement().SendKeys(string.Empty);
         }
 
         public void SendKeys(string text)
         {
             Clear();
-            _coreElement().SendKeys(text);
+            coreElement().SendKeys(text);
+        }
+
+        public string Validity()
+        {
+            return browser.ExecuteScript("return arguments[0].validity.valid", coreElement()).ToString();
         }
     }
 }

@@ -52,5 +52,17 @@ namespace WAES.UI.Test.Scenarios.Steps
             Assert.IsTrue(PageProvider.UnAuthorizedTopBar.SignUpLink.Displayed, "User should see signup link");
             Assert.IsTrue(PageProvider.UnAuthorizedTopBar.LogInLink.Displayed, "User should see login link");
         }
+
+        [Then(@"I see invalidity state of input fields for (.*) and (.*)")]
+        public void ThenISeeInValidityStateOfInputFieldsForAnd(string input, string email)
+        {
+            Assert.IsFalse(bool.Parse(PageProvider.SignUpPage.EmailInput.Validity()),
+                $"Email field should be in invalid for value {email}");
+            Assert.IsFalse(bool.Parse(PageProvider.SignUpPage.UserNameInput.Validity()),
+                $"Username field should be in invalid for value {input}");
+            Assert.IsFalse(bool.Parse(PageProvider.SignUpPage.NameInput.Validity()),
+                $"Name field should be in invalid for value {input}");
+        }
+
     }
 }

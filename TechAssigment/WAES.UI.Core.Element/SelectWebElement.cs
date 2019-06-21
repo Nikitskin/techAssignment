@@ -12,7 +12,7 @@ namespace WAES.UI.Core.Element
 
         public SelectWebElement(IBrowser browser, By by) : base(browser, by)
         {
-            _selectElement = new SelectElement(_coreElement());
+            _selectElement = new SelectElement(coreElement());
         }
 
         public string SelectByText(string text)

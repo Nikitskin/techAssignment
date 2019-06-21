@@ -8,17 +8,17 @@ namespace WAES.UI.Core.Element
     public class BaseWebElement : IBaseWebElement
     {
         private By _by;
-        private IBrowser _browser;
-        protected Func<IWebElement> _coreElement;
+        protected IBrowser browser;
+        protected Func<IWebElement> coreElement;
 
         public BaseWebElement(IBrowser browser, By by)
         {
             _by = by;
-            _coreElement = () => browser.FindElement(_by);
-            _browser = browser;
+            coreElement = () => browser.FindElement(_by);
+            this.browser = browser;
         }
 
-        public string Text => _coreElement().Text;
+        public string Text => coreElement().Text;
 
         public bool Displayed
         {
@@ -26,7 +26,7 @@ namespace WAES.UI.Core.Element
             {
                 try
                 {
-                    return _coreElement().Displayed;
+                    return coreElement().Displayed;
                 }
                 catch (Exception)
                 {
@@ -41,7 +41,7 @@ namespace WAES.UI.Core.Element
             {
                 throw new NoSuchElementException("Element is not displayed");
             }
-            _coreElement().Click();
+            coreElement().Click();
         }
 
     }

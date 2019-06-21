@@ -25,15 +25,14 @@ Scenario: SignUp Validation of log out
 @SmokeTest
 Scenario Outline: Incorrect input validation on SignUp 
 	Given I create new user with '<input>', '<input>', '<input>', '<email>' and random date
-	Then I should be on signup page
+	Then I see invalidity state of input fields for <input> and <email>
 
 	Examples: 
-	| input                       | email                    |
-	| 1                           | 1                        |
-	| ~!@#$%^&*()_+-=[];'\.,/{}:  | _!@#$%^&*()_~1@email.com |
-	| !~aaa                       | test test@email.com      |
-	| SELECT * FROM users         | SELECT * FROM users      |
-	|                             | test@emailcom            |
+	| input                      | email                                           |
+	| ~!@#$%^&*()_+-=[];'\.,/{}: | <>?`\~!@#$%^&*()_+-=[];'\.,/{}:"<>?`\@email.com |
+	| !~aaa                      | test test@email.com                             |
+	| SELECT * FROM users        | SELECT * FROM users                             |
+	|                            | test@emailcom                                   |
 
 @SmokeTest
 Scenario: Date validation on signup

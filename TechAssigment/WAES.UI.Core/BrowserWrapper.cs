@@ -53,5 +53,10 @@ namespace WAES.UI.Core.Browser
         {
             return _coreDriver.SwitchTo();
         }
+
+        public object ExecuteScript(string script, params object[] args)
+        {
+            return ((IJavaScriptExecutor)_coreDriver).ExecuteScript(script, args);
+        }
     }
 }

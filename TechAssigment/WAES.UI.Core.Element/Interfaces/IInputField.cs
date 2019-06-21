@@ -5,5 +5,7 @@
         void Clear();
 
         void SendKeys(string text);
+
+        string Validity();
     }
 }
