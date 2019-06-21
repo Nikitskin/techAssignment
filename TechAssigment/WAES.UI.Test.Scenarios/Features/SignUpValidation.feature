@@ -36,5 +36,5 @@ Scenario Outline: Incorrect input validation on SignUp
 
 @SmokeTest
 Scenario: Date validation on signup
-	Given I create user with configured 'Tester', 'Password', 'Name', 'email@email.com' and '01/31/2019'
-	Then I should be on signup page
+	Given I open signup page
+	Then I check date time that there is no '01/31/2019'

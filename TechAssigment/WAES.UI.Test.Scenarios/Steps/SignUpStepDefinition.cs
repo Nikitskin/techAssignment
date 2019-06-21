@@ -64,5 +64,20 @@ namespace WAES.UI.Test.Scenarios.Steps
                 $"Name field should be in invalid for value {input}");
         }
 
+        [Given(@"I open signup page")]
+        public void GivenIOpenSignupPage()
+        {
+            PageProvider.UnAuthorizedTopBar.SignUpLink.Click();
+        }
+
+        [Then(@"I check date time that there is no '(.*)'")]
+        public void ThenICheckDateTimeThatThereIsNo(DateTime birthDate)
+        {
+            var selectedDay = PageProvider.SignUpPage.DaySelect.SelectByText(birthDate.Day.ToString());
+            var month = PageProvider.SignUpPage.MonthSelect.SelectByText(birthDate.ToString("MMMM"));
+            Assert.AreNotEqual(birthDate.Day.ToString(), selectedDay, 
+                $"User should not be able to select {birthDate.ToString("dd/MM/yyyy")} in signup page");
+        }
+
     }
 }
