@@ -1,10 +1,7 @@
 ﻿using NUnit.Framework;
-using System.Configuration;
 using TechTalk.SpecFlow;
-using System;
 
 namespace WAES.UI.Test.Scenarios.Steps
-
 {
     [Binding]
     public class LoginStepDefinitions : BaseDefinitions
@@ -19,7 +16,7 @@ namespace WAES.UI.Test.Scenarios.Steps
         [Given(@"I log in as '(.*)' into application")]
         public void GivenILogInAsIntoApplication(string username)
         {
-            string password = ConfigurationManager.AppSettings.Get(username);
+            string password = Settings.Default[username].ToString();
 
             GivenIEnterAndOnLoginPage(username, password);
         }
@@ -33,7 +30,7 @@ namespace WAES.UI.Test.Scenarios.Steps
         [Then(@"I should be on to login page")]
         public void ThenIShouldBeNavigatedToLoginPage()
         {
-            Assert.That(PageProvider.Browser.Url.Contains("/app/profile"), "User should be navigated to login page");
+            Assert.That(PageProvider.Browser.Url.Contains("/app/login"), "User should be navigated to login page");
             Assert.IsTrue(PageProvider.LoginPage.LogInButton.Displayed, "User should see login button on login page");
             Assert.IsTrue(PageProvider.LoginPage.UserNameInput.Displayed, "User should see username text field on login page");
             Assert.IsTrue(PageProvider.LoginPage.PasswordInput.Displayed, "User should see password text field on login page");
@@ -71,16 +68,17 @@ namespace WAES.UI.Test.Scenarios.Steps
         [Then(@"I see '(.*)' in my profile")]
         public void ThenISeeInMyProfile(string profileText)
         {
-            Assert.AreEqual(profileText, PageProvider.ProfilePage.InformationSection.Text.Trim(),
-                $"Profile text should be equal to {profileText} for user");
+            var profileInfo = PageProvider.ProfilePage.InformationSection.Text.Trim();
+            Assert.That(profileInfo.Contains(profileText),
+                $"Profile text should be equal to {profileText}, but was {profileInfo}");
         }
 
         [Then(@"I see '(.*)' and '(.*)' in details page")]
         public void ThenISeeAndAs_TesterWearewaes_ComInDetailsPage(string name, string email)
         {
-            Assert.AreEqual(name, PageProvider.DetailsPage.NameLabel.Text.Trim(),
+            Assert.AreEqual($"Name: {name}", PageProvider.DetailsPage.NameLabel.Text.Trim(),
                 $"{name} should be displayed in name field");
-            Assert.AreEqual(email, PageProvider.DetailsPage.EmailLabel.Text.Trim(),
+            Assert.AreEqual($"Email address: {email}", PageProvider.DetailsPage.EmailLabel.Text.Trim(),
                 $"{email} should be displayed in email address");
         }
 

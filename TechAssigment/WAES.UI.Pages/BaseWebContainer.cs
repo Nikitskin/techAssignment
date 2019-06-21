@@ -11,7 +11,7 @@ namespace WAES.UI.Pages
 
         public BaseWebContainer(IBrowser browser)
         {
-            browser = browserSession;
+            browserSession = browser;
         }
 
         public IBaseWebElement Heading => new BaseWebElement(browserSession, By.Id("home_link"));

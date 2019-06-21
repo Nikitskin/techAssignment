@@ -37,7 +37,7 @@ namespace WAES.UI.Pages
 
         public void Flush()
         {
-            Browser.Close();
+            Browser.Quit();
         }
     }
 }

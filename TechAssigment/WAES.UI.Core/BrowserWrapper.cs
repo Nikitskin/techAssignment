@@ -24,9 +24,9 @@ namespace WAES.UI.Core.Browser
 
         public string Url { get => _coreDriver.Url; set => _coreDriver.Url = value; }
 
-        public void Close()
+        public void Quit()
         {
-            _coreDriver.Close();
+            _coreDriver.Quit();
         }
 
         public IWebElement FindElement(By by)

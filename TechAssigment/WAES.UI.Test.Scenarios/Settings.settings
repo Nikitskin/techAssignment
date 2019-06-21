@@ -5,5 +5,14 @@
     <Setting Name="Url" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://waesworks.bitbucket.io</Value>
     </Setting>
+    <Setting Name="dev" Type="System.String" Scope="User">
+      <Value Profile="(Default)">wizard</Value>
+    </Setting>
+    <Setting Name="admin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">hero</Value>
+    </Setting>
+    <Setting Name="tester" Type="System.String" Scope="User">
+      <Value Profile="(Default)">maniac</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

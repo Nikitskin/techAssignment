@@ -34,5 +34,41 @@ namespace WAES.UI.Test.Scenarios {
                 this["Url"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("wizard")]
+        public string dev {
+            get {
+                return ((string)(this["dev"]));
+            }
+            set {
+                this["dev"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("hero")]
+        public string admin {
+            get {
+                return ((string)(this["admin"]));
+            }
+            set {
+                this["admin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("maniac")]
+        public string tester {
+            get {
+                return ((string)(this["tester"]));
+            }
+            set {
+                this["tester"] = value;
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace WAES.UI.Core.Element
 
         public void Clear()
         {
-            _coreElement.Clear();
+            _coreElement.SendKeys(string.Empty);
         }
 
         public void SendKeys(string text)

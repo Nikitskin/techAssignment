@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 using WAES.UI.Pages;
 
 namespace WAES.UI.Test.Scenarios.Steps

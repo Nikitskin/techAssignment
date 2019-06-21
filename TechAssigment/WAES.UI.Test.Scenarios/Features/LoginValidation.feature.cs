@@ -89,10 +89,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Invalid log in check")]
-        [NUnit.Framework.TestCaseAttribute("\"1\"", "\"1\"", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "1", null)]
         [NUnit.Framework.TestCaseAttribute("~!@#$%^&*()_+-=[];\'\\.,/{}:", "<>?`\\~!@#$%^&*()_+-=[];\'\\.,/{}:\"  <>?`\\", null)]
-        [NUnit.Framework.TestCaseAttribute("\"-1A\"", "\"-1A\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"SELECT * FROM users\"", "\"SELECT * FROM users\"", null)]
+        [NUnit.Framework.TestCaseAttribute("-1A", "-1A", null)]
+        [NUnit.Framework.TestCaseAttribute("SELECT * FROM users", "SELECT * FROM users", null)]
+        [NUnit.Framework.TestCaseAttribute("tester", "wizard", null)]
         public virtual void InvalidLogInCheck(string userName, string password, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid log in check", null, exampleTags);
@@ -117,14 +118,14 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void CorrectInformationInProfileAfterLogIn(string user, string profileText, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct information in profile after log in", null, exampleTags);
-#line 20
+#line 21
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 21
- testRunner.Given(string.Format("I log in as \'{0}\' into application", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
- testRunner.When("Click Profile link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given(string.Format("I log in as \'{0}\' into application", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
+ testRunner.When("Click Profile link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
  testRunner.Then(string.Format("I see \'{0}\' in my profile", profileText), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -132,20 +133,20 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Correct information in Details after log in")]
-        [NUnit.Framework.TestCaseAttribute("dev", "Al Skept-Cal Tester", "as.tester@wearewaes.com", null)]
+        [NUnit.Framework.TestCaseAttribute("tester", "Al Skept-Cal Tester", "as.tester@wearewaes.com", null)]
         [NUnit.Framework.TestCaseAttribute("admin", "Amazing Admin", "a.admin@wearewaes.com", null)]
-        [NUnit.Framework.TestCaseAttribute("tester", "Zuper Dooper Dev", "zd.dev@wearewaes.com", null)]
+        [NUnit.Framework.TestCaseAttribute("dev", "Zuper Dooper Dev", "zd.dev@wearewaes.com", null)]
         public virtual void CorrectInformationInDetailsAfterLogIn(string user, string name, string email, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct information in Details after log in", null, exampleTags);
-#line 31
+#line 32
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 32
- testRunner.Given(string.Format("I log in as \'{0}\' into application", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 33
- testRunner.When("Click Details link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given(string.Format("I log in as \'{0}\' into application", user), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 34
+ testRunner.When("Click Details link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
  testRunner.Then(string.Format("I see \'{0}\' and \'{1}\' in details page", name, email), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 using System.IO;
 using WAES.UI.Core.Browser;
 
@@ -22,6 +23,7 @@ namespace WAES.UI.CoreBrowser.BrowserFactory
                     driver = new ChromeDriver(Directory.GetCurrentDirectory());
                     driver.Manage().Cookies.DeleteAllCookies();
                     driver.Manage().Window.Maximize();
+                    driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
                     return new BrowserWrapper(driver);
                 default:
                     throw new WebDriverException("Driver type is not defined");

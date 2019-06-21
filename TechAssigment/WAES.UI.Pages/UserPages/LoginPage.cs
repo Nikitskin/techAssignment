@@ -10,10 +10,10 @@ namespace WAES.UI.Pages.UserPages
         public LoginPage(IBrowser browser) : base(browser)
         { }
 
-        public IBaseWebElement LogInButton => new BaseWebElement(browserSession, By.Id("username_input"));
+        public IBaseWebElement LogInButton => new BaseWebElement(browserSession, By.Id("login_button"));
 
-        public IInputField UserNameInput => new InputField(browserSession, By.Id("password_input"));
+        public IInputField UserNameInput => new InputField(browserSession, By.Id("username_input"));
 
-        public IInputField PasswordInput => new InputField(browserSession, By.Id("login_button"));
+        public IInputField PasswordInput => new InputField(browserSession, By.Id("password_input"));
     }
 }

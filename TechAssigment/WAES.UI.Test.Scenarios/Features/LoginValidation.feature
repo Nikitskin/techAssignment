@@ -11,11 +11,12 @@ Scenario Outline: Invalid log in check
 	And I should be on to login page
 
 	Examples: 
-	| userName                    | password                                 |
-	| "1"                         | "1"                                      |
-	| ~!@#$%^&*()_+-=[];'\.,/{}:  | <>?`\~!@#$%^&*()_+-=[];'\.,/{}:"  <>?`\  |
-	| "-1A"                       | "-1A"                                    |
-	| "SELECT * FROM users"       | "SELECT * FROM users"                    |
+	| userName                   | password                                |
+	| 1                          | 1                                       |
+	| ~!@#$%^&*()_+-=[];'\.,/{}: | <>?`\~!@#$%^&*()_+-=[];'\.,/{}:"  <>?`\ |
+	| -1A                        | -1A                                     |
+	| SELECT * FROM users        | SELECT * FROM users                     |
+	| tester                     | wizard                                  |
 
 Scenario Outline: Correct information in profile after log in
 	Given I log in as '<user>' into application
@@ -35,6 +36,6 @@ Scenario Outline: Correct information in Details after log in
 
 	Examples: 
 	| user   | name                | email                   |
-	| dev    | Al Skept-Cal Tester | as.tester@wearewaes.com |
+	| tester | Al Skept-Cal Tester | as.tester@wearewaes.com |
 	| admin  | Amazing Admin       | a.admin@wearewaes.com   |
-	| tester | Zuper Dooper Dev    | zd.dev@wearewaes.com    |
+	| dev    | Zuper Dooper Dev    | zd.dev@wearewaes.com    |

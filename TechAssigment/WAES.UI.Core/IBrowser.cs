@@ -41,9 +41,9 @@ namespace WAES.UI.Core.Browser
         ReadOnlyCollection<IWebElement> FindElements(By by);
 
         /// <summary>
-        /// Close current browser instance and release resources
+        /// Quits this driver, closing every associated window.
         /// </summary>
-        void Close();
+        void Quit();
 
         /// <summary>
         ///  Instructs the driver to change its settings.
