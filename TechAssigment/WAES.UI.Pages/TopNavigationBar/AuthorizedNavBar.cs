@@ -5,6 +5,9 @@ using WAES.UI.Core.Element.Interfaces;
 
 namespace WAES.UI.Pages.TopNavigationBar
 {
+    /// <summary>
+    /// Page model for top navigation bar of logged in user
+    /// </summary>
     public class AuthorizedNavBar : BaseWebContainer
     {
         public AuthorizedNavBar(IBrowser browser) : base(browser)

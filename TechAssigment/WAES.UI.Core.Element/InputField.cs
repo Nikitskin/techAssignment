@@ -4,6 +4,9 @@ using WAES.UI.Core.Element.Interfaces;
 
 namespace WAES.UI.Core.Element
 {
+    /// <summary>
+    /// Extends BaseWebElement with input methods
+    /// </summary>
     public class InputField : BaseWebElement, IInputField
     {
         public InputField(IBrowser browser, By by) : base(browser, by)

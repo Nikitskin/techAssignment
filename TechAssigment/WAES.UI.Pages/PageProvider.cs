@@ -5,6 +5,9 @@ using WAES.UI.Pages.UserPages;
 
 namespace WAES.UI.Pages
 {
+    /// <summary>
+    /// List for all pages which can be called in tests
+    /// </summary>
     public class PageProvider
     {
         private IBrowser _browser { get; set; }

@@ -5,6 +5,9 @@ using WAES.UI.Core.Element.Interfaces;
 
 namespace WAES.UI.Pages.TopNavigationBar
 {
+    /// <summary>
+    /// Page model of top navigation bar for annonim user
+    /// </summary>
     public class UnAuthNavBar : BaseWebContainer
     {
         public UnAuthNavBar(IBrowser browser) : base(browser)

@@ -6,6 +6,9 @@ using WAES.UI.Core.Element.Interfaces;
 
 namespace WAES.UI.Core.Element
 {
+    /// <summary>
+    /// Extends BaseWebElement to cover Select element methods
+    /// </summary>
     public class SelectWebElement : BaseWebElement, ISelectWebElement
     {
         private SelectElement _selectElement;

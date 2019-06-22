@@ -13,7 +13,6 @@ namespace WAES.UI.Test.Scenarios.Steps
         public void GivenILogInAsIntoApplication(string username)
         {
             string password = Settings.Default[username].ToString();
-
             GivenIEnterAndOnLoginPage(username, password);
         }
 

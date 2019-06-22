@@ -9,6 +9,9 @@ namespace WAES.UI.Core.Browser
     /// </summary>
     public class BrowserWrapper : IBrowser
     {
+        /// <summary>
+        /// Selenium web driver
+        /// </summary>
         private IWebDriver _coreDriver;
 
         public BrowserWrapper (IWebDriver driver)

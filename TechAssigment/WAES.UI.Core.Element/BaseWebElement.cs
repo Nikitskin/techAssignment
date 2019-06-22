@@ -5,6 +5,9 @@ using WAES.UI.Core.Element.Interfaces;
 
 namespace WAES.UI.Core.Element
 {
+    /// <summary>
+    /// Wraps Selenium's IWebElement and extends it's functionality
+    /// </summary>
     public class BaseWebElement : IBaseWebElement
     {
         private By _by;

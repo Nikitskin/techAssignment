@@ -14,6 +14,9 @@ namespace WAES.UI.Test.Scenarios.Steps
             context = injectedContext;
         }
 
+        /// <summary>
+        /// Precondition to open a new clear session before each scenario
+        /// </summary>
         [BeforeScenario]
         private void BeforeScenario()
         {
@@ -22,6 +25,9 @@ namespace WAES.UI.Test.Scenarios.Steps
             PageProvider.Browser.Navigate().GoToUrl(url);
         }
 
+        /// <summary>
+        /// Postcondition to clear all opened browser sessions
+        /// </summary>
         [AfterScenario]
         private void AfterScenario()
         {
