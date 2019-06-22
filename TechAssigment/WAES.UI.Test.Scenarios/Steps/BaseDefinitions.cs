@@ -54,6 +54,15 @@ namespace WAES.UI.Test.Scenarios.Steps
         }
 
         /// <summary>
+        /// After step logging
+        /// </summary>
+        [AfterStep]
+        private void AfterStep()
+        {
+            _test.Info(ScenarioContext.Current.StepContext.StepInfo.Text);
+        }
+
+        /// <summary>
         /// Postcondition to clear all opened browser sessions
         /// </summary>
         [AfterScenario]
@@ -71,7 +80,7 @@ namespace WAES.UI.Test.Scenarios.Steps
                 case ScenarioExecutionStatus.TestError:
                     {
 
-                        _test.Log(Status.Fail, "Test ended with ” +logstatus + ” – " + ScenarioContext.Current.TestError.Message);
+                        _test.Log(Status.Fail, "Test ended with " + Status.Fail + " – " + ScenarioContext.Current.TestError.Message);
                         break;
                     }
             }
