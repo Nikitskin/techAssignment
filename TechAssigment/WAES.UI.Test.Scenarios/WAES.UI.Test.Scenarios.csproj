@@ -82,6 +82,7 @@
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\SignUpValidation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SignUpValidation.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="LoginValidation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

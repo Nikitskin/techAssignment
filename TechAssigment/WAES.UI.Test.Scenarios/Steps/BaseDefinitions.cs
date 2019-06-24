@@ -39,16 +39,18 @@ namespace WAES.UI.Test.Scenarios.Steps
             string url = Settings.Default.Url;
             PageProvider = new PageProvider(Settings.Default.browserType);
             PageProvider.Browser.Navigate().GoToUrl(url);
-            test = extentReport.CreateTest(ScenarioContext.Current.ScenarioInfo.Title);
+            test = extentReport.CreateTest(context.ScenarioInfo.Title);
         }
 
         /// <summary>
-        /// Method after each step execution
+        /// Method before each step execution
         /// </summary>
         [AfterStep]
         private void AfterStep()
         {
-            test.Info(ScenarioContext.Current.StepContext.StepInfo.Text);
+            var status = context.ScenarioExecutionStatus == ScenarioExecutionStatus.TestError ?
+                Status.Fail : Status.Info;
+            test.Log(status, "Step finished : " + context.StepContext.StepInfo.Text);
         }
 
         /// <summary>
@@ -57,7 +59,7 @@ namespace WAES.UI.Test.Scenarios.Steps
         [AfterScenario]
         private void AfterScenario()
         {
-            switch (ScenarioContext.Current.ScenarioExecutionStatus)
+            switch (context.ScenarioExecutionStatus)
             {
                 case ScenarioExecutionStatus.OK:
                     {
@@ -66,8 +68,7 @@ namespace WAES.UI.Test.Scenarios.Steps
                     }
                 case ScenarioExecutionStatus.TestError:
                     {
-                        test = extentReport.CreateTest(ScenarioContext.Current.ScenarioInfo.Title);
-                        test.Log(Status.Fail, ScenarioContext.Current.TestError.Message);
+                        test.Log(Status.Fail, $"{context.TestError.Message} : {context.TestError.StackTrace}");
                         break;
                     }
             }

@@ -67,7 +67,7 @@ namespace WAES.UI.Core.Browser
             Screenshot ss = ((ITakesScreenshot)_coreDriver).GetScreenshot();
             string screenshot = ss.AsBase64EncodedString;
             byte[] screenshotAsByteArray = ss.AsByteArray;
-            ss.SaveAsFile(path + "filename.png");
+            ss.SaveAsFile(path + ".png");
         }
     }
 }

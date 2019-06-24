@@ -1,12 +1,12 @@
 ﻿Feature: SignUpValidation
 
-@story:SmokeTest
+@SmokeTest
 Scenario: SignUp Validation of Profile
 	Given I create new user with 'Tester', 'Password', 'Name', 'email@email.com' and random date
 	When I click Profile link
 	Then I see 'Your super power: You have no super powers yet. =[.' in my profile
 
-@story:SmokeTest
+@SmokeTest
 Scenario Outline: SignUp Validation of Details
 	Given I create new user with 'Tester', 'Password', 'Name', 'email@email.com' and random date
 	When Click Details link
@@ -16,13 +16,13 @@ Scenario Outline: SignUp Validation of Details
 	| name   | email            |
 	| Name   | email@email.com  |
 
-@story:SmokeTest
+@SmokeTest
 Scenario: SignUp Validation of log out
 	Given I create new user with 'Tester', 'Password', 'Name', 'email@email.com' and random date
 	When I press log out link
 	Then I should be on to login page
 
-@story:SmokeTest
+@SmokeTest
 Scenario Outline: Incorrect input validation on SignUp 
 	Given I create new user with '<input>', '<input>', '<input>', '<email>' and random date
 	Then I see invalidity state of input fields for <input> and <email>
@@ -34,7 +34,7 @@ Scenario Outline: Incorrect input validation on SignUp
 	| SELECT * FROM users        | SELECT * FROM users                             |
 	|                            | test@emailcom                                   |
 
-@story:SmokeTest
+@SmokeTest
 Scenario: Date validation on signup
 	Given I open signup page
 	Then I check date time that there is no '01/31/2019'

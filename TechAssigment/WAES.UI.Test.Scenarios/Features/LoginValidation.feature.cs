@@ -71,11 +71,11 @@ namespace WAES.UI.Test.Scenarios.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Log out functionality")]
-        [NUnit.Framework.CategoryAttribute("Story:SmokeTest")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         public virtual void LogOutFunctionality()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log out functionality", null, new string[] {
-                        "Story:SmokeTest"});
+                        "SmokeTest"});
 #line 4
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -91,7 +91,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Invalid log in check")]
-        [NUnit.Framework.CategoryAttribute("Story:SmokeTest")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("1", "1", null)]
         [NUnit.Framework.TestCaseAttribute("~!@#$%^&*()_+-=[];\'\\.,/{}:", "<>?`\\~!@#$%^&*()_+-=[];\'\\.,/{}:\"  <>?`\\", null)]
         [NUnit.Framework.TestCaseAttribute("-1A", "-1A", null)]
@@ -100,7 +100,7 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void InvalidLogInCheck(string userName, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Story:SmokeTest"};
+                    "SmokeTest"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -121,14 +121,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Correct information in profile after log in")]
-        [NUnit.Framework.CategoryAttribute("Story:SmokeTest")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("dev", "Your super power: Debug a repellent factory storage.", null)]
         [NUnit.Framework.TestCaseAttribute("admin", "Your super power: Change the course of a waterfall.", null)]
         [NUnit.Framework.TestCaseAttribute("tester", "Your super power: Voltage AND Current.", null)]
         public virtual void CorrectInformationInProfileAfterLogIn(string user, string profileText, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Story:SmokeTest"};
+                    "SmokeTest"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -149,14 +149,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Correct information in Details after log in")]
-        [NUnit.Framework.CategoryAttribute("Story:SmokeTest")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("tester", "Al Skept-Cal Tester", "as.tester@wearewaes.com", null)]
         [NUnit.Framework.TestCaseAttribute("admin", "Amazing Admin", "a.admin@wearewaes.com", null)]
         [NUnit.Framework.TestCaseAttribute("dev", "Zuper Dooper Dev", "zd.dev@wearewaes.com", null)]
         public virtual void CorrectInformationInDetailsAfterLogIn(string user, string name, string email, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Story:SmokeTest"};
+                    "SmokeTest"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
