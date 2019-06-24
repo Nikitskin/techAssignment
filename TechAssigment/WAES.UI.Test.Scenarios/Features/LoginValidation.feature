@@ -23,7 +23,7 @@ Scenario Outline: Invalid log in check
 @Story:SmokeTest
 Scenario Outline: Correct information in profile after log in
 	Given I log in as '<user>' into application
-	When Click Profile link
+	When I click Profile link
 	Then I see '<profileText>' in my profile
 
 	Examples: 
