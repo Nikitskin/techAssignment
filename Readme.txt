@@ -7,7 +7,8 @@ Cmd file will, get nuget packages, build solution with dotnet build command and 
 
 
 To get test result:
-To get results find Test results folder inside TechAssigment\TestResults
+a) To get results find Test results folder inside TechAssigment\TestResults .trx file
+b) To get html result file you should access TechAssigment\WAES.UI.Test.Scenarios\bin\Debug\netcoreapp2.1\extent\index.html
 
 BrowserTypes:
 If you want to change chrome to headless chrome then you need to go TechAssigment\WAES.UI.Test.Scenarios\Settings.Designer.cs 

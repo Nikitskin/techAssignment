@@ -73,7 +73,7 @@ namespace WAES.UI.Test.Scenarios {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Chrome")]
+        [global::System.Configuration.DefaultSettingValueAttribute("HeadlessChrome")]
         public string browserType {
             get {
                 return ((string)(this["browserType"]));
