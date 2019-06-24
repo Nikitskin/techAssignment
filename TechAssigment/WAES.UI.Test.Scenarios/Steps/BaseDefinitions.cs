@@ -1,5 +1,4 @@
-﻿using Allure.Commons;
-using System;
+﻿using System;
 using System.IO;
 using TechTalk.SpecFlow;
 using WAES.UI.Pages;
@@ -23,9 +22,6 @@ namespace WAES.UI.Test.Scenarios.Steps
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            Environment.SetEnvironmentVariable(
-                AllureConstants.ALLURE_CONFIG_ENV_VARIABLE,
-                Path.Combine(Environment.CurrentDirectory, AllureConstants.CONFIG_FILENAME));
         }
         /// <summary>
         /// Precondition to open a new clear session before each scenario
