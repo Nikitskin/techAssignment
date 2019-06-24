@@ -1,1 +1,1 @@
-dotnet test TechAssigment/TechAssigment.sln
+dotnet test TechAssigment/TechAssigment.sln -l:trx

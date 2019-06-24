@@ -7,5 +7,4 @@ Cmd file will, get nuget packages, build solution with dotnet build command and 
 
 
 To get test result:
-To get results find Test results folder inside TechAssigment\WAES.UI.Test.Scenarios\bin\Debug\netcoreapp2.1\allure-report. 
-Double click on .html file generated
+To get results find Test results folder inside TechAssigment\TestResults
