@@ -76,7 +76,7 @@ namespace WAES.UI.Test.Scenarios.Steps
             var selectedDay = PageProvider.SignUpPage.DaySelect.SelectByText(birthDate.Day.ToString());
             var month = PageProvider.SignUpPage.MonthSelect.SelectByText(birthDate.ToString("MMMM"));
             Assert.AreNotEqual(birthDate.Day.ToString(), selectedDay, 
-                $"User should not be able to select {birthDate.ToString("dd/MM/yyyy")} in signup page");
+                $"User should not be able to select {birthDate.ToString("dd/MM")} in signup page");
         }
 
     }

@@ -71,11 +71,11 @@ namespace WAES.UI.Test.Scenarios.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("SignUp Validation of Profile")]
-        [NUnit.Framework.CategoryAttribute("SmokeTest")]
+        [NUnit.Framework.CategoryAttribute("story:SmokeTest")]
         public virtual void SignUpValidationOfProfile()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SignUp Validation of Profile", null, new string[] {
-                        "SmokeTest"});
+                        "story:SmokeTest"});
 #line 4
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -92,12 +92,12 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("SignUp Validation of Details")]
-        [NUnit.Framework.CategoryAttribute("SmokeTest")]
+        [NUnit.Framework.CategoryAttribute("story:SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("Name", "email@email.com", null)]
         public virtual void SignUpValidationOfDetails(string name, string email, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "SmokeTest"};
+                    "story:SmokeTest"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -119,11 +119,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("SignUp Validation of log out")]
-        [NUnit.Framework.CategoryAttribute("SmokeTest")]
+        [NUnit.Framework.CategoryAttribute("story:SmokeTest")]
         public virtual void SignUpValidationOfLogOut()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SignUp Validation of log out", null, new string[] {
-                        "SmokeTest"});
+                        "story:SmokeTest"});
 #line 20
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -140,7 +140,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Incorrect input validation on SignUp")]
-        [NUnit.Framework.CategoryAttribute("SmokeTest")]
+        [NUnit.Framework.CategoryAttribute("story:SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("~!@#$%^&*()_+-=[];\'\\.,/{}:", "<>?`\\~!@#$%^&*()_+-=[];\'\\.,/{}:\"<>?`\\@email.com", null)]
         [NUnit.Framework.TestCaseAttribute("!~aaa", "test test@email.com", null)]
         [NUnit.Framework.TestCaseAttribute("SELECT * FROM users", "SELECT * FROM users", null)]
@@ -148,7 +148,7 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void IncorrectInputValidationOnSignUp(string input, string email, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "SmokeTest"};
+                    "story:SmokeTest"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -167,11 +167,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Date validation on signup")]
-        [NUnit.Framework.CategoryAttribute("SmokeTest")]
+        [NUnit.Framework.CategoryAttribute("story:SmokeTest")]
         public virtual void DateValidationOnSignup()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Date validation on signup", null, new string[] {
-                        "SmokeTest"});
+                        "story:SmokeTest"});
 #line 38
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

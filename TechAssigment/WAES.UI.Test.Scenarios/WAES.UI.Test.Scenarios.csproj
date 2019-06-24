@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
 
@@ -11,13 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ExtentReports" Version="4.0.3" />
+    <PackageReference Include="Allure.Commons" Version="2.4.2.4" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
     <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit.Allure" Version="1.0.6" />
     <PackageReference Include="NUnit.ConsoleRunner" Version="3.10.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
     <PackageReference Include="SpecFlow" Version="3.0.220" />
+    <PackageReference Include="SpecFlow.Allure" Version="2.4.2.4" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.220" />
     <PackageReference Include="SpecRun.Runner" Version="3.0.352" />
   </ItemGroup>
@@ -62,6 +64,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="allureConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Features\LoginValidation.feature">
       <Generator>False</Generator>
     </None>
@@ -76,10 +81,12 @@
 
   <ItemGroup>
     <SpecFlowFeatureFiles Update="Features\LoginValidation.feature">
-      <Generator></Generator>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoginValidation.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\SignUpValidation.feature">
-      <Generator></Generator>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SignUpValidation.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="LoginValidation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
