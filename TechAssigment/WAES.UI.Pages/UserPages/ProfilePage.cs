@@ -11,6 +11,6 @@ namespace WAES.UI.Pages.UserPages
         { }
 
         public IBaseWebElement InformationSection => new BaseWebElement(browserSession,
-            By.XPath("//section[contains(@class,'view-module')]"));
+            By.XPath("//section[contains(.,'How are you doing')]"));
     }
 }

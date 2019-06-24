@@ -48,12 +48,6 @@ namespace WAES.UI.Test.Scenarios.Steps
                 "Incorrect error message appeared in status bar");
         }
 
-        [When(@"Click Profile link")]
-        public void WhenClickProfileLink()
-        {
-            PageProvider.AuthorizedTopBar.ProfileLink.Click();
-        }
-
         [When(@"Click Details link")]
         public void WhenClickDetailsLink()
         {

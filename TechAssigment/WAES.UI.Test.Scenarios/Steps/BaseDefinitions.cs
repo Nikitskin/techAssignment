@@ -38,19 +38,6 @@ namespace WAES.UI.Test.Scenarios.Steps
             PageProvider.Browser.Navigate().GoToUrl(url);
         }
 
-        [BeforeStep]
-        private void BeforeStep()
-        {
-        }
-
-        /// <summary>
-        /// After step logging
-        /// </summary>
-        [AfterStep]
-        private void AfterStep()
-        {
-        }
-
         /// <summary>
         /// Postcondition to clear all opened browser sessions
         /// </summary>
@@ -58,14 +45,6 @@ namespace WAES.UI.Test.Scenarios.Steps
         private void AfterScenario()
         {
             PageProvider.Flush();
-        }
-
-        /// <summary>
-        /// One time teardown
-        /// </summary>
-        [AfterTestRun]
-        public static void AfterTestRun()
-        {
         }
     }
 }

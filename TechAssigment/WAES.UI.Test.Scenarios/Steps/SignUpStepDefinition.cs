@@ -25,7 +25,6 @@ namespace WAES.UI.Test.Scenarios.Steps
         {
             InputFields(username, password, name, email);
             PageProvider.SignUpPage.SetDateOfBirth();
-            PageProvider.Browser.TakeScreenshot();
             PageProvider.SignUpPage.SubmitButton.Click();
         }
 
