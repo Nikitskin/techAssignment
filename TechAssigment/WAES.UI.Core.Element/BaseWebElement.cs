@@ -40,7 +40,8 @@ namespace WAES.UI.Core.Element
 
         public void Click()
         {
-            if(!Displayed)
+            browser.ExecuteScript("arguments[0].scrollIntoView(true);", coreElement());
+            if (!Displayed)
             {
                 throw new NoSuchElementException("Element is not displayed");
             }

@@ -8,3 +8,10 @@ Cmd file will, get nuget packages, build solution with dotnet build command and 
 
 To get test result:
 To get results find Test results folder inside TechAssigment\TestResults
+
+BrowserTypes:
+If you want to change chrome to headless chrome then you need to go TechAssigment\WAES.UI.Test.Scenarios\Settings.settings and change value of "browserType" variable
+
+Currently supported variables -
+Chrome
+HeadlessChrome

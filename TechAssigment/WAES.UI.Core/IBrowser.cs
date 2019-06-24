@@ -72,5 +72,11 @@ namespace WAES.UI.Core.Browser
         /// <param name="script">Script to execute</param>
         /// <returns>Retunrs response on script from browser</returns>
         object ExecuteScript(string script, params object[] args);
+
+        /// <summary>
+        /// Take a screenshot of current browser window
+        /// </summary>
+        /// <param name="path">Path to store screenshot</param>
+        void TakeScreenshot(string path = "");
     }
 }

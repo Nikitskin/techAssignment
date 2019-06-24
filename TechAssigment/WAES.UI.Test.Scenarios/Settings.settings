@@ -14,5 +14,8 @@
     <Setting Name="tester" Type="System.String" Scope="User">
       <Value Profile="(Default)">maniac</Value>
     </Setting>
+    <Setting Name="browserType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Chrome</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

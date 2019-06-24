@@ -34,7 +34,7 @@ namespace WAES.UI.Test.Scenarios.Steps
         private void BeforeScenario()
         {
             string url = Settings.Default.Url;
-            PageProvider = new PageProvider();
+            PageProvider = new PageProvider(Settings.Default.browserType);
             PageProvider.Browser.Navigate().GoToUrl(url);
         }
 

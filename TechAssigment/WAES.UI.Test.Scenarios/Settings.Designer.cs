@@ -70,5 +70,17 @@ namespace WAES.UI.Test.Scenarios {
                 this["tester"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Chrome")]
+        public string browserType {
+            get {
+                return ((string)(this["browserType"]));
+            }
+            set {
+                this["browserType"] = value;
+            }
+        }
     }
 }

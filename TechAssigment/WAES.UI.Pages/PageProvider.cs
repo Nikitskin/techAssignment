@@ -1,4 +1,5 @@
-﻿using WAES.UI.Core.Browser;
+﻿using System;
+using WAES.UI.Core.Browser;
 using WAES.UI.CoreBrowser.BrowserFactory;
 using WAES.UI.Pages.TopNavigationBar;
 using WAES.UI.Pages.UserPages;
@@ -12,16 +13,23 @@ namespace WAES.UI.Pages
     {
         private IBrowser _browser { get; set; }
 
+        private BrowserTypes _browserType;
+
         public IBrowser Browser
         {
             get
             {
-                if(_browser == null)
+                if (_browser == null)
                 {
-                    _browser = BrowserFactory.GetBrowser(BrowserTypes.Chrome);
+                    _browser = BrowserFactory.GetBrowser(_browserType);
                 }
                 return _browser;
             }
+        }
+
+        public PageProvider(string browserType)
+        {
+            _browserType = (BrowserTypes) Enum.Parse(typeof(BrowserTypes), browserType, true);
         }
 
         public AuthorizedNavBar AuthorizedTopBar => new AuthorizedNavBar(Browser);

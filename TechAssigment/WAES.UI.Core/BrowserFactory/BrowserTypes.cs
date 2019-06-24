@@ -6,6 +6,6 @@
     public enum BrowserTypes
     {
         Chrome = 1,
-        Firefox = 0
+        HeadlessChrome = 0
     }
 }

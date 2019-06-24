@@ -61,5 +61,13 @@ namespace WAES.UI.Core.Browser
         {
             return ((IJavaScriptExecutor)_coreDriver).ExecuteScript(script, args);
         }
+
+        public void TakeScreenshot(string path = "")
+        {
+            Screenshot ss = ((ITakesScreenshot)_coreDriver).GetScreenshot();
+            string screenshot = ss.AsBase64EncodedString;
+            byte[] screenshotAsByteArray = ss.AsByteArray;
+            ss.SaveAsFile(path + "filename.png");
+        }
     }
 }
