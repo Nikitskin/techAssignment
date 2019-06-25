@@ -37,4 +37,4 @@ Scenario Outline: Incorrect input validation on SignUp
 @SmokeTest
 Scenario: Date validation on signup
 	Given I open signup page
-	Then I check date time that there is no '01/31/2019'
+	Then I check date time that there is no '02/31/2019'
